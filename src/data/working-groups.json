@@ -1,10 +1,13 @@
 [
   {
     "name": "Example A",
-    "gitRemote": "https://github.com/EI2030/EI2030-example-working-group-a.git"
+    "remote": "https://github.com/EI2030/EI2030-example-working-group-a.git",
+    "branch": "main"
   },
   {
     "name": "Driving E-ink Displays",
-    "gitRemote": "https://github.com/EI2030/driving-eink-displays.git"
+    "remote": "https://github.com/EI2030/driving-eink-displays.git",
+    "branch": "master"
+
   }
 ]

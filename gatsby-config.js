@@ -37,13 +37,12 @@ module.exports = {
         path: "./src/data/",
       },
     },
-    ...workingGroups.map(({ name, gitRemote }) => ({
+    ...workingGroups.map((gitOptions) => ({
       resolve: "gatsby-source-git",
       options: {
-        name,
         branch: "main",
         patterns: "website/**",
-        remote: gitRemote,
+        ...gitOptions,
       },
     })),
   ],
