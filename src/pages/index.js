@@ -5,7 +5,14 @@ const WorkingGroupList = () => (
   <StaticQuery
     query={graphql`
       {
-        allWorkingGroupPage(filter: { file: { name: { eq: "index" } } }) {
+        allWorkingGroupPage(
+          filter: {
+            file: {
+              name: { eq: "index" }
+              relativeDirectory: { eq: "website" }
+            }
+          }
+        ) {
           nodes {
             workingGroup {
               name
