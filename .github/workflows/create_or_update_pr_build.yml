@@ -1,0 +1,30 @@
+on:
+  pull_request:
+    types: [reopened, opened, synchronize, edited]
+
+env:
+  path_prefix_value: "github_actions_branch_builds/${{ github.head_ref }}"
+
+name: Create PR Build
+jobs:
+  create_or_update_pr_build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: npm i
+      - name: Build Gatsby site
+        run: PATH_PREFIX_VALUE="${{ env.path_prefix_value }}" npm run build -- --prefix-paths
+      - name: GitHub Pages action
+        uses: peaceiris/actions-gh-pages@v3.7.3
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./public
+          destination_dir: ${{ env.path_prefix_value }}
+      - name: Comment PR with url to deployment
+        uses: peter-evans/create-or-update-comment@v1
+        with:
+          issue-number: ${{ github.event.number }}
+          body: |
+            Website has been built and is available for preview at:
+            https://ei2030.github.io/EI2030/${{ env.path_prefix_value }}

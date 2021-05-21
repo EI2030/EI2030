@@ -13,7 +13,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+    "deploy": "gatsby build --prefix-paths && gh-pages --dist public --dest \"${PATH_PREFIX_VALUE:-.}\""
   },
   "dependencies": {
     "gatsby": "^3.4.0",
