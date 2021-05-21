@@ -1,14 +1,19 @@
 const fs = require("fs");
+const path = require("path");
 const pluralize = require("pluralize");
 const workingGroups = JSON.parse(
   fs.readFileSync(require.resolve("./src/data/working-groups.json"))
 );
 
+// This is used by our Git Actions CI/CD process to create deployments dynamically for pull requests
+const pathPrefix = path.join("/EI2030", process.env.DEPLOY_TO_SUBDIRECTORY);
+console.log("gatsby-config.js pathPrefix will be set to:", pathPrefix);
+
 module.exports = {
   siteMetadata: {
     title: "EI2030",
   },
-  pathPrefix: "/EI2030",
+  pathPrefix,
   plugins: [
     "gatsby-plugin-theme-ui",
     "gatsby-transformer-remark",
