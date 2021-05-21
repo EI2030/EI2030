@@ -9,5 +9,11 @@
     "remote": "https://github.com/EI2030/driving-eink-displays.git",
     "branch": "master"
 
+  },
+  {
+    "name": "Psychology and UX",
+    "remote": "https://github.com/EI2030/psych-ux.git",
+    "branch": "master"
+
   }
 ]
