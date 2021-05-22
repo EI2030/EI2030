@@ -1,0 +1,16 @@
+on:
+  pull_request:
+    types: [reopened, opened, synchronize, edited]
+
+name: Create PR Build
+jobs:
+  create_or_update_pr_build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: npm i
+      - name: debug var
+        run: echo "github_actions_branch_builds/${GITHUB_HEAD_REF}"
+      # - name: build Gatsby
+      # run: DEPLOY_TO_SUBDIRECTORY="github_actions_branch_builds/${GITHUB_REF##*/}" npm run deploy
