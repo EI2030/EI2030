@@ -6,8 +6,8 @@ name: Create PR Build
 jobs:
   create_or_update_pr_build:
     runs-on: ubuntu-latest
-    env:
-      DEPLOY_TO: 'github_actions_branch_builds/${{ github.head_ref }}'
+    #env:
+    #  DEPLOY_TO: 'github_actions_branch_builds/${{ github.head_ref }}'
     steps:
       - uses: actions/checkout@v2
       # - name: Install Dependencies
