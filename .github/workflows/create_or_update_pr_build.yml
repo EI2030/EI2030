@@ -6,10 +6,14 @@ name: Create PR Build
 jobs:
   create_or_update_pr_build:
     runs-on: ubuntu-latest
+    env:
+      DEPLOY_TO: "github_actions_branch_builds/${{ GITHUB_HEAD_REF }}"
     steps:
       - uses: actions/checkout@v2
-      - name: Install Dependencies
-        run: npm i
+      # - name: Install Dependencies
+      #   run: npm i
+      - name: debug global var
+        run: echo $DEPLOY_TO
       - name: debug var
         run: echo "github_actions_branch_builds/${GITHUB_HEAD_REF}"
       # - name: build Gatsby
