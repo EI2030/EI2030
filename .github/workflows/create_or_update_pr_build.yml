@@ -15,3 +15,5 @@ jobs:
         run: npm i
       - name: Build Gatsby site
         run: DEPLOY_TO_SUBDIRECTORY="${{ env.site_demo_path }}" npm run build -- --prefix-paths
+      - name: Deploy to Github Pages
+        run: node ./node_modules/.bin/gh-pages --dist public --dest "${{ env.site_demo_path }}
