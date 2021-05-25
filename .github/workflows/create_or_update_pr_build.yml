@@ -11,11 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      # - name: Install Dependencies
-      #   run: npm i
-      - name: debug global var
-        run: echo $DEPLOY_TO
-      - name: debug var
-        run: echo "${{ env.site_demo_path }}"
-      # - name: build Gatsby
-      # run: DEPLOY_TO_SUBDIRECTORY="github_actions_branch_builds/${GITHUB_REF##*/}" npm run deploy
+      - name: Install Dependencies
+        run: npm i
+      - name: Build Gatsby site
+        run: DEPLOY_TO_SUBDIRECTORY="${{ env.site_demo_path }}" npm run build -- --prefix-paths
