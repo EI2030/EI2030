@@ -2,12 +2,13 @@ on:
   pull_request:
     types: [reopened, opened, synchronize, edited]
 
+env:
+  site_demo_path: 'github_actions_branch_builds/${{ github.head_ref }}'
+
 name: Create PR Build
 jobs:
   create_or_update_pr_build:
     runs-on: ubuntu-latest
-    #env:
-    #  DEPLOY_TO: 'github_actions_branch_builds/${{ github.head_ref }}'
     steps:
       - uses: actions/checkout@v2
       # - name: Install Dependencies
@@ -15,6 +16,6 @@ jobs:
       - name: debug global var
         run: echo $DEPLOY_TO
       - name: debug var
-        run: echo "github_actions_branch_builds/${GITHUB_HEAD_REF}"
+        run: echo "${{ env.site_demo_path }}"
       # - name: build Gatsby
       # run: DEPLOY_TO_SUBDIRECTORY="github_actions_branch_builds/${GITHUB_REF##*/}" npm run deploy
