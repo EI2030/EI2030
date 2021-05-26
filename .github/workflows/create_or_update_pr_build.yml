@@ -21,3 +21,8 @@ jobs:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           publish_dir: ./public
           destination_dir: ${{ env.site_demo_path }}
+      - name: Comment PR with url to deployment
+        uses: peter-evans/create-or-update-comment@v1
+        with:
+          issue-number: ${{ github.event.number }}
+          body: Testing out thte comments...
