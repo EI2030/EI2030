@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 3.4.0"/><link as="script" rel="preload" href="/EI2030/github_actions_branch_builds/issue-2-automatic-deployment/webpack-runtime-1c9a5a6e5d1ed29bc087.js"/><link as="script" rel="preload" href="/EI2030/github_actions_branch_builds/issue-2-automatic-deployment/framework-388411f792712f2fed40.js"/><link as="script" rel="preload" href="/EI2030/github_actions_branch_builds/issue-2-automatic-deployment/app-2bc30c34b51bc9f297cc.js"/><link as="script" rel="preload" href="/EI2030/github_actions_branch_builds/issue-2-automatic-deployment/component---src-pages-groups-working-group-page-working-group-name-working-group-page-file-name-js-d112a950ba3af77b59b4.js"/><link as="fetch" rel="preload" href="/EI2030/github_actions_branch_builds/issue-2-automatic-deployment/page-data/groups/psychology-and-ux/deep-os/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/EI2030/github_actions_branch_builds/issue-2-automatic-deployment/page-data/sq/d/2744905544.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/EI2030/github_actions_branch_builds/issue-2-automatic-deployment/page-data/app-data.json" crossorigin="anonymous"/></head><body><script>(function() { try {
+  var mode = localStorage.getItem('theme-ui-color-mode');
+  if (!mode) return
+  document.documentElement.classList.add('theme-ui-' + mode);
+  document.body.classList.add('theme-ui-' + mode);
+} catch (e) {} })();</script><div id="___gatsby"><style data-emotion="css-global 167dzma">body{color:var(--theme-ui-colors-text);background-color:var(--theme-ui-colors-background);}</style><style data-emotion="css-global 0"></style><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><a href="/EI2030/github_actions_branch_builds/issue-2-automatic-deployment/">EI2030 Home</a><h2><a href="/EI2030/github_actions_branch_builds/issue-2-automatic-deployment/groups/psychology-and-ux/">Working Group: <!-- -->Psychology and UX</a></h2><ul><li style="display:inline-block;margin-left:1em"><a href="/EI2030/github_actions_branch_builds/issue-2-automatic-deployment/groups/psychology-and-ux/template/">template</a></li><li style="display:inline-block;margin-left:1em"><a href="/EI2030/github_actions_branch_builds/issue-2-automatic-deployment/groups/psychology-and-ux/overview/">overview</a></li><li style="display:inline-block;margin-left:1em"><a href="/EI2030/github_actions_branch_builds/issue-2-automatic-deployment/groups/psychology-and-ux/general/">general</a></li><li style="display:inline-block;margin-left:1em"><a aria-current="page" class="" style="text-decoration:none" href="/EI2030/github_actions_branch_builds/issue-2-automatic-deployment/groups/psychology-and-ux/deep-os/">deep-os</a></li><li style="display:inline-block;margin-left:1em"><a href="/EI2030/github_actions_branch_builds/issue-2-automatic-deployment/groups/psychology-and-ux/einkux-highlvloverview/">einkux-highlvloverview</a></li><li style="display:inline-block;margin-left:1em"><a href="/EI2030/github_actions_branch_builds/issue-2-automatic-deployment/groups/psychology-and-ux/text-editor/">text-editor</a></li></ul><h1></h1><div><h1>Deep OS - UX case study</h1>
+<h6>tags: <code>psych-ux</code> <code>case study</code> <code>non-eink</code></h6>
+<p>This article contains a list of principles for redesigning UX in order to help people to achieve their goals and maintain a healthy relationship with technology.</p>
+<p>While this isn't only applicable to e-ink, it pairs well with it. This sort of thing flies in the face of most of the current growth-focused work in tech currently (think conversion rate optimization), but makes total sense for devices/principles that are focused on combatting that sort of thing.</p>
+<br/>
+<h2>Improving Focus</h2>
+<p>This section details X principles for how UX could be redesigned to make it easier to focus.</p>
+<p>Structure for each principle:</p>
+<ul>
+<li>Psychological Evidence</li>
+<li>Example of bad design</li>
+<li>Example of good design</li>
+</ul>
+<br/>
+<h3>1. Minimax presentation of information</h3>
+<p>Minimax: minimum possible information that enables the maximum level of performance of the current task.</p>
+<p>Never present information to the user which is not directly related to the task they are performing right now. The only information allowed is information which is necessary for their task, without which they could not perform that task.</p>
+<p>This means that menu bars, options, tab bars should be hidden by default.</p>
+<pre><code>    1. e.g. Microsoft Word focus mode = good; discord = bad, google chrome full screen, zoomed in = good, google chrome normal = bad
+
+
+
+* Not putting anything on the screen until the user requests it. 
+    * e.g. there is no need to have bars at the bottom of the screen showing my other tabs, unless i actually want to change tabs right now. so e.g. only display tabs when I hold down a key.
+</code></pre>
+<p>e.g. Discord. Too much information at once. When I am reading a message, I shouldnt be distracted by all the other information on the screen</p>
+<p>Sources (scientific):
+"Costs" of task switching
+it takes time + effort for your brain to readjust to the new task every time you switch between two tasks
+Impact of dual tasking
+dividing your attention between two things (e.g. A and B) at once is also bad for learning both
+Frequent Media multitakers demonstrate impaired ability to focus, memory</p>
+<h2>work in progress notes</h2>
+<p>the below are work in progress notes.</p>
+<p>What if every interaction felt as good as a typeform survey?</p>
+<p>Principles</p>
+<ol>
+<li>
+<p>Never present information to the user which is not directly related to the task they are performing right now. The only information allowed is information which is necessary for their task, without which they could not perform the task
+1. e.g. Microsoft Word focus mode = good; discord = bad, google chrome full screen, zoomed in = good, google chrome normal = bad</p>
+</li>
+<li>
+<p>Always focus on helping users achieve their goals. Provide gentle nudges to help them stay on task, but let them make their own choices, never force them to behave in certain ways
+1. e.g. intention chrome extension = good, Facebook desktop notifications = bad</p>
+</li>
+<li>
+<p>Do your utmost to keep cognitive load as low as possible. We want our users to have as much cognitive resources as possible to focus on complex thinking. This translates into “always present the minimum viable amount of information on the screen”, such that they can still perform the task easily
+1. e.g. typeform surveys = good, google form surveys = bad; apple notes in full screen = good, apple notes</p>
+</li>
+<li>
+<p>Anti-attention economy. Users should only interact with the device when they explicitly want to and out of a desire to do something. They should not be encouraged to check for updates when bored, or to use the device mindlessly to generate attention economy.
+1. Boring eink screen = good,</p>
+</li>
+<li>
+<p>No computer or display should be more stimulating, more vivid, more beatuiful than real life
+1. e.g. black and white = good, colourful display in 5k = bad</p>
+</li>
+</ol>
+<p>Dual eink/lcd</p>
+<ul>
+<li>The lcd must turn off when you try to read the eink!!!</li>
+<li>Lcd needs black and white mode
+<ul>
+<li>This requires some kind of conversion to enable distinction between red and greens when in black and white mode.</li>
+</ul>
+</li>
+</ul></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/groups/psychology-and-ux/deep-os/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-2b4dc1da88fa4af9dd1a.js"],"app":["/app-2bc30c34b51bc9f297cc.js"],"component---src-pages-404-js":["/component---src-pages-404-js-fa3156fd98a1fb53118c.js"],"component---src-pages-groups-working-group-page-working-group-name-working-group-page-file-name-js":["/component---src-pages-groups-working-group-page-working-group-name-working-group-page-file-name-js-d112a950ba3af77b59b4.js"],"component---src-pages-index-js":["/component---src-pages-index-js-3a8753f3163a5bdc860f.js"]};/*]]>*/</script><script src="/EI2030/github_actions_branch_builds/issue-2-automatic-deployment/polyfill-2b4dc1da88fa4af9dd1a.js" nomodule=""></script><script src="/EI2030/github_actions_branch_builds/issue-2-automatic-deployment/component---src-pages-groups-working-group-page-working-group-name-working-group-page-file-name-js-d112a950ba3af77b59b4.js" async=""></script><script src="/EI2030/github_actions_branch_builds/issue-2-automatic-deployment/app-2bc30c34b51bc9f297cc.js" async=""></script><script src="/EI2030/github_actions_branch_builds/issue-2-automatic-deployment/framework-388411f792712f2fed40.js" async=""></script><script src="/EI2030/github_actions_branch_builds/issue-2-automatic-deployment/webpack-runtime-1c9a5a6e5d1ed29bc087.js" async=""></script></body></html>
