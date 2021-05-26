@@ -27,5 +27,4 @@ jobs:
           issue-number: ${{ github.event.number }}
           body: |
             Website has been built and is available for preview at:
-            
             https://ei2030.github.io/EI2030/${{ env.site_demo_path }}
