@@ -15,16 +15,9 @@ jobs:
         run: npm i
       - name: Build Gatsby site
         run: DEPLOY_TO_SUBDIRECTORY="${{ env.site_demo_path }}" npm run build -- --prefix-paths
-      - name: Set Git Ids for CI/CD
-        run:  git config --global user.email "no-reply@github.com" && git config --global user.name "Github Actions Deployer"
-      - name: Deploy to Github Pages
-        # run: node ./node_modules/.bin/gh-pages --dist public --dest "${{ env.site_demo_path }}"
-        run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          mkdir -p ${{ env.site_demo_path }}
-          cp -r public/* ${{ env.site_demo_path }}
-          git checkout gh-pages
-          git add ${{ env.site_demo_path }}
-          git commit -m "gh-pages deploy"
-          git push
+      - name: GitHub Pages action
+        uses: peaceiris/actions-gh-pages@v3.7.3
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./public
+          destination_dir: ${{ env.site_demo_path }}
