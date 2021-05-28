@@ -34,8 +34,6 @@ jobs:
 
   build_and_deploy_main_branch:
     if: ${{github.event_name == 'push' && github.ref == 'refs/heads/main' }}
-    env:
-      path_prefix_value: "github_actions_branch_builds/${{ github.head_ref }}"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
