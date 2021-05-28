@@ -6,7 +6,7 @@ const workingGroups = JSON.parse(
 );
 
 // This is used by our Git Actions CI/CD process to create deployments dynamically for pull requests
-const pathPrefix = path.join("/EI2030", process.env.PATH_PREFIX_VALUE);
+const pathPrefix = path.join("/EI2030", process.env.PATH_PREFIX_VALUE || "");
 console.log("gatsby-config.js pathPrefix will be set to:", pathPrefix);
 
 module.exports = {
