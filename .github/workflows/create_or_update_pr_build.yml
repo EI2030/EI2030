@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+  repository_dispatch:
+    types: [content_repo_deploy]
 
 name: Build and Deploy
 jobs:
@@ -33,7 +35,7 @@ jobs:
             https://ei2030.github.io/EI2030/${{ env.path_prefix_value }}
 
   build_and_deploy_main_branch:
-    if: ${{github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
